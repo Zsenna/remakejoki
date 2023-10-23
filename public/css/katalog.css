@@ -1,0 +1,49 @@
+/* cart */
+body {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* body 1 */
+#outcon {
+    margin-top: 2em;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#outcon .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#outcon .box {
+    margin: 0.5em;
+    padding-bottom: 1em;
+    flex-grow: 0;
+    flex-basis: 200;
+    justify-content: center;
+}
+
+#outcon p {
+    /* margin-left: 1em; */
+    color: black;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#outcon a {
+    /* margin-left: 1em; */
+    color: black;
+    font-family: "Work Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
