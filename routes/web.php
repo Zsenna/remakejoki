@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/home', function () {
-    return view('new/home');
+    return view('home');
 });
 
 Route::get('/trackRecord', function () {
@@ -26,11 +26,11 @@ Route::get('/trackRecord', function () {
 });
 
 Route::get('/highlight', function () {
-    return view('new/highlight');
+    return view('highlight');
 });
 
 Route::get('/compro', function () {
-    return view('new/compro');
+    return view('compro');
 });
 
 Route::get('/contact', function () {
@@ -38,7 +38,7 @@ Route::get('/contact', function () {
 });
 
 Route::get('/training', function () {
-    return view('new/training');
+    return view('training');
 });
 
 Route::get('/center', function () {
@@ -54,11 +54,11 @@ Route::get('/online', function () {
 });
 
 Route::get('/competition', function () {
-    return view('new/competition');
+    return view('competition');
 });
 
 Route::get('/worksem', function () {
-    return view('new/worksem');
+    return view('worksem');
 });
 
 Route::get('/about', function () {
@@ -86,19 +86,19 @@ Route::get('/katalog/nplc', function () {
 });
 
 Route::get('/pic1', function () {
-    return view('pic1');
+    return view('katalog/pic1');
 });
 
 Route::get('/pic2', function () {
-    return view('pic2');
+    return view('katalog/pic2');
 });
 
 Route::get('/pic3', function () {
-    return view('pic3');
+    return view('katalog/pic3');
 });
 
 Route::get('/pic4', function () {
-    return view('pic4');
+    return view('katalog/pic4');
 });
 Route::get('/si', function () {
     return view('si');

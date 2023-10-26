@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Training</title>
+    <title>Workshop & Seminar</title>
 </head>
 
 <body>
@@ -96,7 +96,7 @@
     </nav>
     <div id="gap" class="container-fluid"></div>
     <div id="homecon2" class="container-fluid">
-        <h2 class="tittle">TRAINING</h2>
+        <h2 class="tittle">WORKSHOP & SEMINAR</h2>
         <div class="container-fluid-3">
             <img src="\img\picture-key-automation-products-highres-en-1-fix696x391-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid">
@@ -133,36 +133,6 @@
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
-            </div>
-        </div>
-    </div>
-    <div id="homecon4" class="container-fluid">
-        <div class="container-fluid-5">
-            <div class="container-fluid-5b">
-                <div class="container-fluid-51b">
-                    <img src="\img\bannerslider-sp2020-1800x600-fix444x250-webp.png" class="img-fluid" alt="Image Error">
-                    <div class="container-fluid">
-                        <h4>lorem ipsum</h4>
-                        <p>lorem ipsum</p>
-                    </div>
-                </div>
-                <div class="container-fluid-51b">
-                    <img src="\img\brochure-2022-papso-en-high-1-fix444x250-webp.png" class="img-fluid" alt="Image Error">
-                    <div class="container-fluid">
-                        <h4>lorem ipsum</h4>
-                        <p>lorem ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid-5a">
-                <img src="\img\festo-official-partner-16917c-1-fix952x235-webp.png" class="img-fluid" alt="Image Error">
-                <div class="container-fluid-51a">
-                    <h4>lorem ipsum</h4>
-                    <p>lorem ipsum</p>
-                    <div class="container-fluid-btn">
-                        <a class="btn btn-primary" href="#" role="button">Find Your Local Distributor</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
