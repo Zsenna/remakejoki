@@ -18,27 +18,27 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/home', function () {
-    return view('home');
+    return view('new/home');
 });
 
 Route::get('/trackRecord', function () {
-    return view('trackRecord');
+    return view('new/trackRecord');
 });
 
 Route::get('/highlight', function () {
-    return view('highlight');
+    return view('new/highlight');
 });
 
 Route::get('/compro', function () {
-    return view('compro');
+    return view('new/compro');
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('new/contact');
 });
 
 Route::get('/training', function () {
-    return view('training');
+    return view('new/training');
 });
 
 Route::get('/center', function () {
@@ -54,15 +54,15 @@ Route::get('/online', function () {
 });
 
 Route::get('/competition', function () {
-    return view('competition');
+    return view('new/competition');
 });
 
 Route::get('/worksem', function () {
-    return view('worksem');
+    return view('new/worksem');
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('new/about');
 });
 
 Route::get('/product', function () {

@@ -1,0 +1,717 @@
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+/* navbar */
+.navbar .navbar-brand {
+    margin-left: 3em;
+    margin-right: 6em;
+}
+
+.navbar .navbar-nav {
+    gap: 1.5em;
+}
+
+.navbar a {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#gap {
+    background-color: #0091dc;
+    width: 100%;
+    height: 2.5em;
+}
+
+/* homecon */
+#homecon {
+    background-color: #f2f3f5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+#homecon .container-fluid {
+    padding: 1.5em 6em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-color: #fff;
+    width: 70%;
+    height: auto;
+    border-radius: 0.25em;
+    box-shadow: 0em 0.063em 0.5em 0em #b6bec6;
+}
+
+#homecon .container-fluid-top {
+    height: 100%;
+    width: 100%;
+}
+
+#homecon h4 {
+    font-family: "Trebuchet MS";
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#homecon p {
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#homecon a {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#homecon .container-fluid-bot {
+    margin-top: 5em;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+}
+
+/* homecon1 */
+#homecon1 {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5em;
+}
+
+#homecon1 .container-fluid-2 {
+    justify-content: center;
+    display: flex;
+    margin: 4em 0em;
+    width: 50%;
+    flex-direction: row;
+}
+
+#homecon1 p {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 1em;
+}
+
+/* homecon2 */
+#homecon2 {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#homecon2 .tittle {
+    margin-bottom: 1.5em;
+}
+
+#homecon2 .container-fluid-3 {
+    flex-direction: row;
+    padding: 0em 16.8em;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#homecon2 .container-fluid {
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+#homecon2 .container-fluid-3a {
+    margin-top: 6em;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+
+#homecon2 .container-fluid-3b {
+    text-align: right;
+    width: 100%;
+    height: 100%;
+}
+
+#homecon2 h4 {
+    font-family: "Trebuchet MS";
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+#homecon2 p {
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#homecon2 a {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* homecon3 */
+#homecon3 {
+    margin-top: 6em;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    text-align: left;
+    width: 72%;
+    height: 100%;
+}
+
+#homecon3 p {
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    width: 50%;
+    height: 50%;
+    margin-top: 0.2em;
+    margin-left: 0.5em;
+}
+
+/* homecon4 */
+#homecon4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#homecon4 .tittle {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1.5em;
+}
+
+#homecon4 .container-fluid-5 {
+    width: 72%;
+    height: 100%;
+    flex-grow: 0;
+    flex-basis: 200;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 1.5em;
+}
+
+#homecon4 .container-fluid-51b img {
+    width: 50%;
+    height: 100%;
+    /* width: 19.5em;
+    height: 10em; */
+}
+
+#homecon4 .container-fluid-5a img {
+    width: 100%;
+}
+
+#homecon4 .container-fluid-5b {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    gap: 1.5em;
+}
+#homecon4 .container-fluid-51b {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    display: flex;
+    background-color: #f2f3f5;
+}
+
+#homecon4 .container-fluid {
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#homecon4 .container-fluid-5a {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2em;
+    flex-direction: column;
+    display: flex;
+    background-color: #f2f3f5;
+}
+
+#homecon4 .container-fluid-51a {
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#homecon4 .container-fluid-btn {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#homecon4 h4 {
+    font-family: "Trebuchet MS";
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+}
+#homecon4 p {
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+#homecon4 a {
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    width: auto;
+    height: 100%;
+    margin-top: 3.5em;
+}
+
+/* footer */
+#footer {
+    padding: 0% 14.5%;
+    margin-top: 2em;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: #f2f3f5;
+    width: 100%;
+    height: 100%;
+}
+
+#footer .container-fluid-sos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+#footer .container-fluid-mid {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+#footer .container-fluid-mid .container-fluid {
+    text-align: left;
+}
+
+#footer .container-fluid-bot {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+#footer a {
+    color: rgba(0, 0, 0, 0.29);
+    text-align: center;
+    font-family: "Trebuchet MS";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    padding-right: 2em;
+}
+
+@media (max-width: 1000px) {
+    body {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    /* navbar */
+    .navbar .navbar-brand {
+        margin-left: 0em;
+    }
+
+    .navbar a {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #gap {
+        height: 1em;
+    }
+
+    /* homecon */
+    #homecon .container-fluid {
+        padding: 1.5em 2em;
+        margin-bottom: 1em;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        border-radius: 0.25em;
+        box-shadow: 0em 0.063em 0.5em 0em #b6bec6;
+    }
+
+    #homecon .container-fluid-top {
+        height: auto;
+        width: 100%;
+    }
+
+    #homecon h4 {
+        font-family: "Trebuchet MS";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    #homecon p {
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #homecon a {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #homecon .container-fluid-bot {
+        margin-top: 2em;
+        text-align: right;
+        height: 100%;
+        width: auto;
+    }
+
+    /* homecon1 */
+    #homecon1 {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    #homecon1 .container-fluid-2 {
+        justify-content: center;
+        display: flex;
+        margin: 1em 0em;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #homecon1 p {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        padding-top: 1em;
+    }
+
+    /* homecon2 */
+    #homecon2 {
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    #homecon2 .tittle {
+        margin-bottom: 1.5em;
+    }
+
+    #homecon2 .container-fluid-3 {
+        flex-direction: row;
+        padding: 0em 0em;
+        display: block;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #homecon2 .container-fluid {
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    #homecon2 .container-fluid-3a {
+        margin-top: 1em;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    #homecon2 .container-fluid-3b {
+        text-align: right;
+        width: 100%;
+        height: 100%;
+    }
+
+    #homecon2 h4 {
+        font-family: "Trebuchet MS";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    #homecon2 p {
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #homecon2 a {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #homecon2 .container-fluid-3b {
+        margin-top: 2em;
+        text-align: right;
+        height: 100%;
+        width: auto;
+    }
+
+    /* homecon3 */
+    #homecon3 {
+        margin-top: 6em;
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+    }
+
+    #homecon3 p {
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        width: 100%;
+        height: 100%;
+        margin-top: 0.2em;
+        margin-left: 0.5em;
+    }
+
+    /* homecon4 */
+    #homecon4 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 3em;
+        margin-bottom: 4em;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    #homecon4 .tittle {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    #homecon4 .container-fluid-5 {
+        width: 100%;
+        height: 100%;
+        flex-grow: 0;
+        flex-basis: 200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        gap: 1.5em;
+    }
+
+    #homecon4 .container-fluid-5b {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        gap: 1.5em;
+    }
+    #homecon4 .container-fluid-51b {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        display: flex;
+        background-color: #f2f3f5;
+    }
+
+    #homecon4 .container-fluid {
+        width: 100%;
+        height: 100%;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #homecon4 .container-fluid-5a {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 2em;
+        flex-direction: column;
+        display: flex;
+        background-color: #f2f3f5;
+    }
+
+    #homecon4 .container-fluid-51a {
+        width: 100%;
+        height: 100%;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #homecon4 .container-fluid-btn {
+        margin-top: 2em;
+        text-align: right;
+        height: 100%;
+        width: auto;
+    }
+
+    #homecon4 h4 {
+        font-family: "Trebuchet MS";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    #homecon4 p {
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #homecon4 a {
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    /* footer */
+    #footer {
+        padding: 0% 5%;
+        margin-top: 1em;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        background-color: #f2f3f5;
+        width: 100%;
+        height: 100%;
+    }
+
+    #footer .container-fluid-sos {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+        width: 200%;
+    }
+
+    #footer .container-fluid-mid {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    #footer .container-fluid-mid .container-fluid {
+        text-align: left;
+    }
+
+    #footer h4 {
+        font-family: "Trebuchet MS";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    #footer p {
+        font-family: "Trebuchet MS";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    #footer .container-fluid-bot {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    #footer a {
+        color: rgba(0, 0, 0, 0.29);
+        text-align: center;
+        font-family: "Trebuchet MS";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        padding-right: 1em;
+    }
+}
