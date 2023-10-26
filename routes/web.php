@@ -21,8 +21,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/trackRecord', function () {
-    return view('new/trackRecord');
+Route::get('/trackrecord', function () {
+    return view('new/trackrecord');
 });
 
 Route::get('/highlight', function () {

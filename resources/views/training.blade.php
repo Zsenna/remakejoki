@@ -166,6 +166,37 @@
             </div>
         </div>
     </div>
+    <div id="homecon5" class="container-fluid">
+        <div class="container-fluid-5">
+            <div class="container-fluid-5a">
+                <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
+                <div class="container-fluid-51a">
+                    <h4>lorem ipsum</h4>
+                    <p>lorem ipsum</p>
+                    <div class="container-fluid-btn">
+                        <a class="btn btn-primary" href="#" role="button">Find out More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid-5b">
+                <div class="container-fluid-51b">
+                    <img src="\img\bannerslider-sp2020-1800x600-fix444x250-webp.png" class="img-fluid" alt="Image Error">
+                    <div class="container-fluid">
+                        <h4>lorem ipsum</h4>
+                        <p>lorem ipsum</p>
+                    </div>
+                </div>
+                <div class="container-fluid-51b">
+                    <img src="\img\brochure-2022-papso-en-high-1-fix444x250-webp.png" class="img-fluid" alt="Image Error">
+                    <div class="container-fluid">
+                        <h4>lorem ipsum</h4>
+                        <p>lorem ipsum</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
             <div class="row">
