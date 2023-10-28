@@ -34,7 +34,7 @@ Route::get('/compro', function () {
 });
 
 Route::get('/contact', function () {
-    return view('new/contact');
+    return view('contact');
 });
 
 Route::get('/training', function () {
@@ -62,7 +62,7 @@ Route::get('/worksem', function () {
 });
 
 Route::get('/about', function () {
-    return view('new/about');
+    return view('about');
 });
 
 Route::get('/product', function () {

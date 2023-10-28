@@ -1,3 +1,7 @@
+* {
+    max-width: 100%;
+}
+
 /* cart */
 body {
     justify-content: center;
@@ -29,7 +33,7 @@ body {
 }
 
 #outcon p {
-    /* margin-left: 1em; */
+    margin-top: 1em;
     color: black;
     font-family: "Work Sans";
     font-size: 20px;

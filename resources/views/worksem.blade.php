@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="/home">
                 <img src="\img\link-logo-blue-svg.png" alt="Image Error" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,25 +111,25 @@
         </div>
     </div>
     <div id="homecon3" class="container-fluid">
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </div>
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </div>
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-1.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </div>
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>

@@ -1,91 +1,74 @@
-.content {
-    width: 100%;
-    margin: auto;
-    height: 420px;
-    padding: 0 2em;
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
 }
 
-.jarak {
-    padding: 0 2pc;
+html {
+    scroll-behavior: smooth;
 }
 
-.kiri {
-    width: 50%;
-    height: 50%;
-    float: left;
-    margin-top: 1px;
+body {
+    background-color: white;
 }
 
-.kiri .jarak .judbes {
-    color: #333333;
-    font-size: 72px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 700;
-    height: 25%;
+/* contact */
+#tittle .fw-bolder {
+    font-size: 3.7vw;
+    text-align: center;
 }
 
-.sidebar-left {
-    height: 25%;
+#caontainerteks2 .fs-4 p {
+    font-size: 1.5vw;
 }
 
-.rowjudul {
-    display: flex;
-    line-height: 36px;
-    color: #0091dc;
-    font-family: "Poppins";
-    font-size: 24px;
+#alamat .fs-4 p {
+    font-size: 1.2vw;
+    margin-top: -1em;
 }
 
-.col {
-    flex: 1;
-    padding: 10px 5px;
-    color: #333333;
+#alamat .fs-1 p {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-bottom: 1em;
 }
 
-.coll {
-    flex: 1;
-    padding: 10px 5px;
-}
+@media (max-width: 1000px) {
+    #tittle .fw-bolder {
+        font-size: 5vw;
+        /* margin-left: 0.6em; */
+    }
 
-.kanan {
-    width: 50%;
-    height: 50%;
-    float: left;
-    margin-top: 4em;
-}
+    #caontainerteks2 .fs-4 p {
+        font-size: 3vw;
+        margin-left: 1.5em;
+    }
 
-.kanan .jarak .kontenkanan {
-    color: #333333;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 25px;
-    margin-bottom: 42px;
-    height: 25%;
-}
+    #alamat {
+        text-align: left;
+    }
 
-.kananbawah {
-    height: 25%;
-}
+    #alamat .fs-4 p {
+        font-size: 3vw;
+        margin-left: 0.7em;
+        margin-top: -1em;
+    }
 
-.rowjudulkanan {
-    color: #0091dc;
-    font-family: "Poppins";
-    font-size: 24px;
-    margin-left: 1em;
-}
+    #alamat .fs-1 p {
+        font-weight: bold;
+        font-size: 3vw;
+        margin-left: 0.65em;
+    }
 
-.rowsosmedkanan {
-    display: flex;
+    /* #caontainerteks .fs-4 {
+        font-size: 5vw;
+    } */
 
-    color: #333333;
-    font-family: "Poppins";
-
-    margin-left: 2em;
-}
-
-.maps {
-    width: 100vw;
-    height: 50vh;
-    padding: 2em 5em;
+    iframe {
+        justify-items: center;
+        width: 80vw;
+        height: 25vh;
+        margin-left: 1.5em;
+        margin-top: -2em;
+    }
 }

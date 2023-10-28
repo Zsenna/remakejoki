@@ -15,6 +15,7 @@
     font-style: normal;
     font-weight: 400;
 }
+
 .dropdown-menu li {
     position: relative;
 }
@@ -23,7 +24,7 @@
     display: none;
     position: absolute;
     left: 100%;
-    top: -7px;
+    top: -6px;
 }
 
 .dropdown-menu > li:hover > .submenu {
@@ -87,15 +88,6 @@
 }
 
 @media (max-width: 1000px) {
-    body {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: fit-content;
-        height: fit-content;
-    }
-
     /* navbar */
     .navbar .navbar-brand {
         margin-left: 0em;
