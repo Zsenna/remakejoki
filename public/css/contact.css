@@ -1,0 +1,91 @@
+.content {
+    width: 100%;
+    margin: auto;
+    height: 420px;
+    padding: 0 2em;
+}
+
+.jarak {
+    padding: 0 2pc;
+}
+
+.kiri {
+    width: 50%;
+    height: 50%;
+    float: left;
+    margin-top: 1px;
+}
+
+.kiri .jarak .judbes {
+    color: #333333;
+    font-size: 72px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    height: 25%;
+}
+
+.sidebar-left {
+    height: 25%;
+}
+
+.rowjudul {
+    display: flex;
+    line-height: 36px;
+    color: #0091dc;
+    font-family: "Poppins";
+    font-size: 24px;
+}
+
+.col {
+    flex: 1;
+    padding: 10px 5px;
+    color: #333333;
+}
+
+.coll {
+    flex: 1;
+    padding: 10px 5px;
+}
+
+.kanan {
+    width: 50%;
+    height: 50%;
+    float: left;
+    margin-top: 4em;
+}
+
+.kanan .jarak .kontenkanan {
+    color: #333333;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 42px;
+    height: 25%;
+}
+
+.kananbawah {
+    height: 25%;
+}
+
+.rowjudulkanan {
+    color: #0091dc;
+    font-family: "Poppins";
+    font-size: 24px;
+    margin-left: 1em;
+}
+
+.rowsosmedkanan {
+    display: flex;
+
+    color: #333333;
+    font-family: "Poppins";
+
+    margin-left: 2em;
+}
+
+.maps {
+    width: 100vw;
+    height: 50vh;
+    padding: 2em 5em;
+}

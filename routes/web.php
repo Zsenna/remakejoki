@@ -22,7 +22,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/trackrecord', function () {
-    return view('new/trackrecord');
+    return view('trackrecord');
 });
 
 Route::get('/highlight', function () {
@@ -106,8 +106,10 @@ Route::get('/si', function () {
 
 
 Route::view('add', 'upload');
-
 Route::post('add', [uploadController::class, 'upload']);
+
+Route::view('add2', 'upload-edu');
+Route::post('add2', [uploadEduController::class, 'upload_edu']);
 
 Route::get('product', [productController::class, 'show']);
 Route::get('robot', [ourProductcontroller::class, 'showrobot']);

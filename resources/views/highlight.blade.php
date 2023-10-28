@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Highlight</title>
 </head>
@@ -27,15 +28,15 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Experience</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Highlight AKM</a></li>
-                                    <li><a class="dropdown-item" href="#">Track Record</a></li>
+                                    <li><a class="dropdown-item" href="/highlight">Highlight AKM</a></li>
+                                    <li><a class="dropdown-item" href="/trackrecord">Track Record</a></li>
                                 </ul>
                             </li>
 
                             <li><a class="dropdown-item" href="#">About AKM</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Company Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                    <li><a class="dropdown-item" href="/compro">Company Profile</a></li>
+                                    <li><a class="dropdown-item" href="/contact">Contact</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -45,37 +46,37 @@
                             Education
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Training</a>
+                            <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Training Center</a></li>
                                     <li><a class="dropdown-item" href="#">Onsite Training</a></li>
                                     <li><a class="dropdown-item" href="#">Online Training</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="#">competition</a>
+                            <li><a class="dropdown-item" href="/competition">competition</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Workshop & Seminar</a>
+                            <li><a class="dropdown-item" href="/worksem">Workshop & Seminar</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Product</a>
+                            <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Robot</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/robot">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">AGV</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/agv">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">PLC Trainer</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/plc">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/nplc">Katalog</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -100,13 +101,49 @@
             <h1>Highlight AKM</h1>
             <img src="\img\picture-electric-automation-seamless-connectivity-screen-fix18.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid">
-                <div class="container-fluid-top">
+                <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container-fluid-top">
+                                <h4>lorem ipsum</h4>
+                                <p>lorem ipsum</p>
+                            </div>
+                            <div class="container-fluid-bot">
+                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
+                            </div>
+                        </div>
+                        @foreach($mainbox as $main)
+                        <div class="carousel-item">
+                            <div class="container-fluid-top">
+                                <h4>{{$main['itemText']}}</h4>
+                                <p>{{$main['itemDesc']}}</p>
+                            </div>
+                            <div class="container-fluid-bot">
+                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- <div class="container-fluid-top">
                     <h4>lorem ipsum</h4>
                     <p>lorem ipsum</p>
                 </div>
                 <div class="container-fluid-bot">
                     <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -147,25 +184,25 @@
         </div>
     </div>
     <div id="homecon3" class="container-fluid">
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </div>
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </div>
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-1.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </div>
-        <div class="container-fluid-4">
+        <div class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>

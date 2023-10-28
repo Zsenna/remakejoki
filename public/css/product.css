@@ -1,15 +1,39 @@
-/* @media screen and (min-width: 500px) {
-    #topoutcon .box {
-        background-color: white;
-        width: 10%;
-        height: 10%;
-        position: absolute;
-        bottom: 0%;
-        right: 50%;
-        left: 50%;
+* {
+    max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+    body {
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
     }
 
-    #topoutcon h2 {
+    /* topoutcon */
+    #topoutcon {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #topoutcon .container-fluid-top {
+        padding: 0.5em;
+        background-color: white;
+        width: 100%;
+        height: auto;
+        flex-grow: 0;
+        flex-basis: 200;
+        border-radius: 0.25em;
+        box-shadow: 0em 0.063em 0.5em 0em #b6bec6;
+        /* transform: translate(-50%, -50%); */
+    }
+
+    #topoutcon .container-fluid-about .container-fluid-top .tittle {
         margin-bottom: 0.5em;
         font-family: "Trebuchet MS";
         color: black;
@@ -18,70 +42,128 @@
         text-align: center;
     }
 
-    #topoutcon p {
+    #topoutcon .p {
         font-family: "Trebuchet MS";
         color: black;
-        font-size: 7px;
+        font-size: 10px;
         font-weight: 400;
         text-align: left;
     }
-} */
 
-body {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    /* body 1 */
+    #outcon {
+        margin-top: 1em;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #outcon .container-fluid-a {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #outcon h1 {
+        margin: 1em 0em;
+        font-family: "ABeeZee";
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    #outcon .container-fluid-box {
+        margin: 0.5em;
+        padding-bottom: 1em;
+        flex-grow: 0;
+        flex-basis: 200;
+        text-align: left;
+        background-color: #0091dc;
+        text-decoration: none;
+    }
+
+    #outcon .container-fluid-a .container-fluid-box .img-fluid {
+        width: 100%;
+    }
+
+    #outcon .container-fluid-a .container-fluid-box .text {
+        text-decoration: none;
+        font-family: "Work Sans";
+        font-size: 10px;
+    }
+
+    #outcon .container-fluid-a .container-fluid-box .desc {
+        padding-right: 1em;
+        text-decoration: none;
+        font-family: "Work Sans";
+        font-size: 8px;
+    }
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* width: 100%;
+    height: auto; */
+}
+
+/* topoutcon */
 #topoutcon {
-    position: relative;
     text-align: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-#topoutcon .box {
+#topoutcon .container-fluid-about {
+    padding: 1em 0em;
+}
+
+#topoutcon .container-fluid-top {
     padding: 2.5em 2.5em;
     background-color: white;
-    width: 50em;
-    height: 25em;
+    width: 100%;
+    height: fit-content;
     flex-grow: 0;
     flex-basis: 200;
-    position: absolute;
-    top: 25%;
-    right: 5%;
-    /* transform: translate(-50%, -50%); */
+    border-radius: 0.25em;
+    box-shadow: 0em 0.063em 0.5em 0em #b6bec6;
 }
-#topoutcon h2 {
+
+#topoutcon .tittle {
     margin-bottom: 0.5em;
     font-family: "Trebuchet MS";
     color: black;
     font-size: 32px;
     font-weight: 700;
-    line-height: 42px;
     text-align: center;
 }
 
-#topoutcon p {
+#topoutcon .p {
     font-family: "Trebuchet MS";
     color: black;
     font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
     text-align: left;
 }
 
 /* body 1 */
 #outcon {
-    margin-top: 3em;
+    margin-top: 1.5em;
+    flex-direction: column;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-#outcon .container {
+#outcon .container-fluid-a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -98,17 +180,20 @@ body {
     text-align: center;
 }
 
-#outcon .box {
+#outcon .container-fluid-box {
     margin: 0.5em;
     padding-bottom: 1em;
     flex-grow: 0;
     flex-basis: 200;
     text-align: left;
     background-color: #0091dc;
+    text-decoration: none;
 }
 
-#outcon .container .box p {
+#outcon .container-fluid-a .container-fluid-box .text {
+    margin-top: 1em;
     margin-left: 1em;
+    text-decoration: none;
     color: white;
     font-family: "Work Sans";
     font-size: 20px;
@@ -117,7 +202,8 @@ body {
     line-height: normal;
 }
 
-#outcon .container .box a {
+#outcon .container-fluid-a .container-fluid-box .desc {
+    text-decoration: none;
     margin-left: 1em;
     color: white;
     font-family: "Work Sans";
@@ -129,6 +215,7 @@ body {
 
 /* body 2 */
 #outcon1 {
+    flex-direction: column;
     margin-top: 4.5em;
     justify-content: center;
     display: flex;

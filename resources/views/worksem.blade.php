@@ -27,15 +27,15 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Experience</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Highlight AKM</a></li>
-                                    <li><a class="dropdown-item" href="#">Track Record</a></li>
+                                    <li><a class="dropdown-item" href="/highlight">Highlight AKM</a></li>
+                                    <li><a class="dropdown-item" href="/trackrecord">Track Record</a></li>
                                 </ul>
                             </li>
 
                             <li><a class="dropdown-item" href="#">About AKM</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Company Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                    <li><a class="dropdown-item" href="/compro">Company Profile</a></li>
+                                    <li><a class="dropdown-item" href="/contact">Contact</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -45,37 +45,37 @@
                             Education
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Training</a>
+                            <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Training Center</a></li>
                                     <li><a class="dropdown-item" href="#">Onsite Training</a></li>
                                     <li><a class="dropdown-item" href="#">Online Training</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="#">competition</a>
+                            <li><a class="dropdown-item" href="/competition">competition</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Workshop & Seminar</a>
+                            <li><a class="dropdown-item" href="/worksem">Workshop & Seminar</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Product</a>
+                            <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Robot</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/robot">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">AGV</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/agv">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">PLC Trainer</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/plc">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="#">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="/katalog/nplc">Katalog</a></li>
                                         </ul>
                                     </li>
                                 </ul>

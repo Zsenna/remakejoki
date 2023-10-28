@@ -1,0 +1,28 @@
+#homecon .carousel {
+    display: flex;
+    justify-content: center;
+    padding: 0em 1em 3em 1em;
+    width: 100%;
+    height: 100%;
+}
+
+#homecon .carousel-item {
+    padding: 0em 6em;
+}
+
+@media (max-width: 1000px) {
+    #homecon .carousel {
+        display: flex;
+        padding: 1em 1em 3em 1em;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    /* #homecon .carousel-indicators {
+        background-color: aqua;
+        width: fit-content;
+    } */
+    #homecon .carousel-item {
+        padding: 0em 2em;
+    }
+}
