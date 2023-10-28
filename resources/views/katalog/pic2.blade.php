@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <title>Lorem Ipsum Page</title>
+    <link rel="stylesheet" href="css/navfoot.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Home</title>
 </head>
 
 <body>
+    <header>
+        <h1>Welcome to the Lorem Ipsum Page (PIC2)</h1>
+    </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/home">
@@ -95,146 +95,39 @@
             </div>
         </div>
     </nav>
-    <div id="gap" class="container-fluid"></div>
-    <div id="homecon" class="container-fluid">
-        <div class="container-fluid-1">
-            <img src="\img\picture-electric-automation-seamless-connectivity-screen-fix18.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid">
-                <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container-fluid-top">
-                                <h4>lorem ipsum</h4>
-                                <p>lorem ipsum</p>
-                            </div>
-                            <div class="container-fluid-bot">
-                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                            </div>
-                        </div>
-                        @foreach($mainbox as $main)
-                        <div class="carousel-item">
-                            <div class="container-fluid-top">
-                                <h4>{{ $main['itemText']}}</h4>
-                                <p>{{$main['itemDesc']}}</p>
-                            </div>
-                            <div class="container-fluid-bot">
-                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="homecon1" class="container-fluid">
-        <h2>CATEGORY</h2>
-        <div class="container-fluid-2">
-            <div class="container-fluid">
-                <img src="\img\op1.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-            <div class="container-fluid">
-                <img src="\img\op2.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-            <div class="container-fluid">
-                <img src="\img\op3.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-            <div class="container-fluid">
-                <img src="\img\op4.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-        </div>
-    </div>
-    <div id="homecon2" class="container-fluid">
-        <h2 class="tittle">NEWS</h2>
-        @foreach($mainbox as $main)
-        <div class="container-fluid-3">
-            <img src="\img\picture-key-automation-products-highres-en-1-fix696x391-webp.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid">
-                <div class="container-fluid-3a">
-                    <h4>{{$main['itemText']}}</h4>
-                    <p>{{$main['itemDesc']}}</p>
-                </div>
-                <div class="container-fluid-3b">
-                    <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </div>
-    <div id="homecon3" class="container-fluid">
-        <a class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
-            </div>
-        </a>
-        <div class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
-            </div>
-        </div>
-        <div class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-1.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
-            </div>
-        </div>
-        <div class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
-            </div>
-        </div>
-    </div>
-    <div id="homecon4" class="container-fluid">
-        <h2 class="tittle">MARKETING</h2>
-        <div class="container-fluid-5">
-            <div class="container-fluid-5b">
-                <div class="container-fluid-51b">
-                    <img src="\img\bannerslider-sp2020-1800x600-fix444x250-webp.png" class="img-fluid" alt="Image Error">
-                    <div class="container-fluid">
-                        <h4>lorem ipsum</h4>
-                        <p>lorem ipsum</p>
-                    </div>
-                </div>
-                <div class="container-fluid-51b">
-                    <img src="\img\brochure-2022-papso-en-high-1-fix444x250-webp.png" class="img-fluid" alt="Image Error">
-                    <div class="container-fluid">
-                        <h4>lorem ipsum</h4>
-                        <p>lorem ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid-5a">
-                <img src="\img\festo-official-partner-16917c-1-fix952x235-webp.png" class="img-fluid" alt="Image Error">
-                <div class="container-fluid-51a">
-                    <h4>lorem ipsum</h4>
-                    <p>lorem ipsum</p>
-                    <div class="container-fluid-btn">
-                        <a class="btn btn-primary" href="#" role="button">Find Your Local Distributor</a>
-                    </div>
+    <main>
+        <section>
+            <h2>What is Lorem Ipsum?</h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+            </p>
+        </section>
 
-                </div>
-            </div>
-        </div>
-    </div>
+        <section>
+            <h2>Why do we use it?</h2>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page
+                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
+                and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+            </p>
+        </section>
+
+        <section>
+            <h2>Where does it come from?</h2>
+            <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+                from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word
+                in classical literature, discovered the undoubtable source.
+            </p>
+        </section>
+    </main>
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
             <div class="row">
@@ -275,7 +168,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
