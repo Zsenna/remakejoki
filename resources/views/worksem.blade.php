@@ -54,28 +54,28 @@
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
                             </li>
-                            <li><a class="dropdown-item" href="/worksem">Workshop & Seminar</a>
+                            <li><a class="dropdown-item" href="/worksem">Workshop <br>& Seminar</a>
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Robot</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/robot">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">AGV</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/agv">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">PLC Trainer</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/plc">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/nplc">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -104,9 +104,9 @@
                     <h4>lorem ipsum</h4>
                     <p>lorem ipsum</p>
                 </div>
-                <div class="container-fluid-3b">
+                <!-- <div class="container-fluid-3b">
                     <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

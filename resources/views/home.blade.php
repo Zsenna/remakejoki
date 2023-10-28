@@ -55,28 +55,28 @@
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
                             </li>
-                            <li><a class="dropdown-item" href="/worksem">Workshop & Seminar</a>
+                            <li><a class="dropdown-item" href="/worksem">Workshop <br>& Seminar</a>
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Robot</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/robot">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">AGV</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/agv">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">PLC Trainer</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/plc">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/nplc">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -111,19 +111,19 @@
                                 <h4>lorem ipsum</h4>
                                 <p>lorem ipsum</p>
                             </div>
-                            <div class="container-fluid-bot">
+                            <!-- <div class="container-fluid-bot">
                                 <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                            </div>
+                            </div> -->
                         </div>
                         @foreach($mainbox as $main)
                         <div class="carousel-item">
                             <div class="container-fluid-top">
                                 <h4>{{ $main['itemText']}}</h4>
-                                <p>{{$main['itemDesc']}}</p>
+                                <p>{{ strip_tags($main['itemDesc'])}}</p>
                             </div>
-                            <div class="container-fluid-bot">
+                            <!-- <div class="container-fluid-bot">
                                 <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                            </div>
+                            </div> -->
                         </div>
                         @endforeach
                     </div>
@@ -168,40 +168,40 @@
             <div class="container-fluid">
                 <div class="container-fluid-3a">
                     <h4>{{$main['itemText']}}</h4>
-                    <p>{{$main['itemDesc']}}</p>
+                    <p>{{strip_tags($main['itemDesc'])}}</p>
                 </div>
-                <div class="container-fluid-3b">
+                <!-- <div class="container-fluid-3b">
                     <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                </div>
+                </div> -->
             </div>
         </div>
         @endforeach
     </div>
     <div id="homecon3" class="container-fluid">
-        <a class="container-fluid-con">
+        <a href="/pic1" class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
         </a>
-        <div class="container-fluid-con">
+        <a href="/pic2" class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
-        </div>
-        <div class="container-fluid-con">
+        </a>
+        <a href="/pic3" class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-1.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
-        </div>
-        <div class="container-fluid-con">
+        </a>
+        <a href="/pic4" class="container-fluid-con">
             <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
                 <p>Lorem Ipsum</p>
             </div>
-        </div>
+        </a>
     </div>
     <div id="homecon4" class="container-fluid">
         <h2 class="tittle">MARKETING</h2>
@@ -227,10 +227,9 @@
                 <div class="container-fluid-51a">
                     <h4>lorem ipsum</h4>
                     <p>lorem ipsum</p>
-                    <div class="container-fluid-btn">
+                    <!-- <div class="container-fluid-btn">
                         <a class="btn btn-primary" href="#" role="button">Find Your Local Distributor</a>
-                    </div>
-
+                    </div> -->
                 </div>
             </div>
         </div>

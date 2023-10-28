@@ -8,9 +8,6 @@
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to the Lorem Ipsum Page (PIC4)</h1>
-    </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/home">
@@ -55,28 +52,28 @@
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
                             </li>
-                            <li><a class="dropdown-item" href="/worksem">Workshop & Seminar</a>
+                            <li><a class="dropdown-item" href="/worksem">Workshop <br>& Seminar</a>
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
                                     <li><a class="dropdown-item" href="#">Robot</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/robot">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">AGV</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/agv">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">PLC Trainer</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/plc">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
                                         </ul>
                                     </li>
                                     <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
                                         <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="/katalog/nplc">Katalog</a></li>
+                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -95,6 +92,9 @@
             </div>
         </div>
     </nav>
+    <header>
+        <h1>Welcome to the Lorem Ipsum Page (PIC4)</h1>
+    </header>
     <main>
         <section>
             <h2>What is Lorem Ipsum?</h2>

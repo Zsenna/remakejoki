@@ -17,7 +17,7 @@
             <input type="text" id="judul" name="itemText" required><br>
 
             <label for="deskripsi">Deskripsi:</label>
-            <textarea name="editor1" id="editor1" rows="10" cols="80"></textarea><br>
+            <textarea name="itemDesc" id="itemDesc" rows="10" cols="80"></textarea><br>
 
             <label for="storageLocation">Where would you store?</label><br>
             <input type="radio" id="training" name="itemTo" value="Training">
@@ -87,7 +87,7 @@
         config.toolbarCanCollapse = true;
 
     };
-    CKEDITOR.replace('editor1');
+    CKEDITOR.replace('itemDesc');
 </script>
 
 </html>
