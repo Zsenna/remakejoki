@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home1.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Home</title>
@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home">
+            <a class="navbar-brand" href="/">
                 <img src="\img\link-logo-blue-svg.png" alt="Image Error" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,9 +48,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Training Center</a></li>
-                                    <li><a class="dropdown-item" href="#">Onsite Training</a></li>
-                                    <li><a class="dropdown-item" href="#">Online Training</a></li>
+                                    <li><a class="dropdown-item" href="/center">Training Center</a></li>
+                                    <li><a class="dropdown-item" href="/onsite">Onsite Training</a></li>
+                                    <li><a class="dropdown-item" href="/online">Online Training</a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
@@ -59,25 +59,17 @@
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Robot</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/robot">Robot</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">AGV</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/agv">AGV</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">PLC Trainer</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/plc">PLC Trainer</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/nplc">Mec Lab non PLC</a>
+
                                     </li>
                                 </ul>
                             </li>
@@ -96,148 +88,142 @@
         </div>
     </nav>
     <div id="gap" class="container-fluid"></div>
+    <?php
+
+    use Illuminate\Support\Facades\DB;
+
+    $mainbox =
+        DB::select('SELECT itemImg, itemText, itemDesc, headImg FROM mainbox WHERE itemTo = "mainp"');
+    ?>
+
     <div id="homecon" class="container-fluid">
         <div class="container-fluid-1">
-            <img src="\img\picture-electric-automation-seamless-connectivity-screen-fix18.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid">
-                <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container-fluid-top">
-                                <h4>lorem ipsum</h4>
-                                <p>lorem ipsum</p>
-                            </div>
-                            <!-- <div class="container-fluid-bot">
-                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                            </div> -->
-                        </div>
-                        @foreach($mainbox as $main)
-                        <div class="carousel-item">
-                            <div class="container-fluid-top">
-                                <h4>{{ $main['itemText']}}</h4>
-                                <p>{{ strip_tags($main['itemDesc'])}}</p>
-                            </div>
-                            <!-- <div class="container-fluid-bot">
-                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                            </div> -->
-                        </div>
-                        @endforeach
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            @foreach ($mainbox as $main)
+            <img src="{{$main->headImg}}" class="img-fluid" alt="">
+            @endforeach
+            <div class="popup-card">
+                <div class="updown">
+                    <h5 style="padding-bottom: .2em;">About us</h4>
+                        <p class="headtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facilis tempore id, voluptatum dolor magnam eaque est, illo impedit doloremque ratione officia explicabo labore? Vero placeat quos hic quasi minima.</p>
                 </div>
             </div>
+
         </div>
     </div>
-    <div id="homecon1" class="container-fluid">
-        <h2>CATEGORY</h2>
-        <div class="container-fluid-2">
-            <div class="container-fluid">
-                <img src="\img\op1.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-            <div class="container-fluid">
-                <img src="\img\op2.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-            <div class="container-fluid">
-                <img src="\img\op3.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-            <div class="container-fluid">
-                <img src="\img\op4.png" class="img-fluid" alt="Image Error">
-                <p>lorem ipsum</p>
-            </div>
-        </div>
-    </div>
+
     <div id="homecon2" class="container-fluid">
-        <h2 class="tittle">NEWS</h2>
-        @foreach($mainbox as $main)
-        <div class="container-fluid-3">
-            <img src="\img\picture-key-automation-products-highres-en-1-fix696x391-webp.png" class="img-fluid" alt="Image Error">
-            <div class="container-fluid">
-                <div class="container-fluid-3a">
-                    <h4>{{$main['itemText']}}</h4>
-                    <p>{{strip_tags($main['itemDesc'])}}</p>
+        <h2 class="tittle">HIGHLIGHT</h2>
+        <a href="/artikel#home" class="container" style="width: 100%;">
+            @foreach ($mainbox as $main)
+            <div class="row mb-3">
+                <div class="col">
+                    <img src="{{$main->itemImg}}" class="img-fluid" alt="Image Error">
                 </div>
-                <!-- <div class="container-fluid-3b">
-                    <a class="btn btn-primary" href="#" role="button">Find Out More</a>
-                </div> -->
+                <div class="col" style="text-align: left;">
+                    <h4>{{$main->itemText}}</h4>
+                    <p>{{Strip_tags($main->itemDesc)}}</p>
+                </div>
             </div>
-        </div>
-        @endforeach
+            @endforeach
+        </a>
     </div>
     <div id="homecon3" class="container-fluid">
-        <a href="/pic1" class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
+        <a href="/highlight" class="container-fluid-con">
+            <img src="img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
+                <p></p>
             </div>
         </a>
-        <a href="/pic2" class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
+        <a href="/highlight" class="container-fluid-con">
+            <img src="img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
+                <p></p>
             </div>
         </a>
-        <a href="/pic3" class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp-1.png" class="img-fluid" alt="Image Error">
+        <a href="/highlight" class="container-fluid-con">
+            <img src="img\picture-energy-saving-services-screen-fix496x661-webp-1.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
+                <p></p>
             </div>
         </a>
-        <a href="/pic4" class="container-fluid-con">
-            <img src="\img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
+        <a href="/highlight" class="container-fluid-con">
+            <img src="img\picture-energy-saving-services-screen-fix496x661-webp.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
-                <p>Lorem Ipsum</p>
+                <p></p>
             </div>
         </a>
     </div>
     <div id="homecon4" class="container-fluid">
-        <h2 class="tittle">MARKETING</h2>
+        <h2 class="tittle">OUR Service</h2>
         <div class="container-fluid-5">
             <div class="container-fluid-5b">
-                <div class="container-fluid-51b">
-                    <img src="\img\bannerslider-sp2020-1800x600-fix444x250-webp.png" class="img-fluid" alt="Image Error">
-                    <div class="container-fluid">
-                        <h4>lorem ipsum</h4>
-                        <p>lorem ipsum</p>
+                <a href="/onsite">
+                    <div class="container-fluid-51b">
+                        <img src="img/bannerslider-sp2020-1800x600-fix444x250-webp.png" class="img-fluid" alt="Image Error">
+                        <div class="container-fluid">
+                            <h4>Onsite Training</h4>
+                            <p>Read More...</p>
+                        </div>
                     </div>
-                </div>
-                <div class="container-fluid-51b">
-                    <img src="\img\brochure-2022-papso-en-high-1-fix444x250-webp.png" class="img-fluid" alt="Image Error">
-                    <div class="container-fluid">
-                        <h4>lorem ipsum</h4>
-                        <p>lorem ipsum</p>
+                </a>
+                <a href="/online">
+                    <div class="container-fluid-51b">
+                        <img src="img\brochure-2022-papso-en-high-1-fix444x250-webp.png" class="img-fluid" alt="Image Error">
+                        <div class="container-fluid">
+                            <h4>Online Training</h4>
+                            <p>Read More...</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="container-fluid-5a">
-                <img src="\img\festo-official-partner-16917c-1-fix952x235-webp.png" class="img-fluid" alt="Image Error">
-                <div class="container-fluid-51a">
-                    <h4>lorem ipsum</h4>
-                    <p>lorem ipsum</p>
-                    <!-- <div class="container-fluid-btn">
+                <a href="/center">
+                    <img src="img\festo-official-partner-16917c-1-fix952x235-webp.png" class="img-fluid" alt="Image Error">
+                    <div class="container-fluid-51a">
+                        <h4>Training Center</h4>
+                        <p>Read More...</p>
+                        <!-- <div class="container-fluid-btn">
                         <a class="btn btn-primary" href="#" role="button">Find Your Local Distributor</a>
                     </div> -->
-                </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="homecon1" class="container-fluid">
+        <h2>Our Product</h2>
+        <div class="container-fluid-2">
+            <div class="container-fluid">
+                <a href="/robot">
+                    <img src="img\op1.png" class="img-fluid" alt="Image Error">
+                    <p>Robot</p>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a href="/agv">
+                    <img src="img\op2.png" class="img-fluid" alt="Image Error">
+                    <p>AGV</p>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a href="/plc">
+                    <img src="img\op3.png" class="img-fluid" alt="Image Error">
+                    <p>PLC</p>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a href="/nplc">
+                    <img src="img\op4.png" class="img-fluid" alt="Image Error">
+                    <p>Mec Lab non PLC</p>
+                </a>
             </div>
         </div>
     </div>
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
             <div class="row">
-                <img src="\img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
+                <img src="img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
             </div>
         </div>
         <div class="container-fluid-mid">
@@ -267,7 +253,7 @@
         </div>
         <div class="container-fluid-bot">
             <div class="container-fluid">
-                <a>© 2023 PT. Festo All rights reserved</a>
+                <a>© 2023 </a>
                 <a>Imprint</a>
                 <a>Data protection</a>
                 <a>Terms and conditions</a>
@@ -276,6 +262,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

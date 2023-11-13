@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2023 at 12:00 PM
+-- Generation Time: Nov 13, 2023 at 07:44 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,29 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `test-product`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `boxproduct`
---
-
-CREATE TABLE `boxproduct` (
-  `boxproduct_id` bigint(20) UNSIGNED NOT NULL,
-  `itemImg` varchar(100) NOT NULL,
-  `itemText` varchar(100) NOT NULL,
-  `itemDesc` varchar(10000) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `boxproduct`
---
-
-INSERT INTO `boxproduct` (`boxproduct_id`, `itemImg`, `itemText`, `itemDesc`, `created_at`, `updated_at`) VALUES
-(2, 'http://127.0.0.1:8000/image/1697704313.png', 'Wire', 'LOREM IPSUM', NULL, NULL),
-(3, 'http://127.0.0.1:8000/image/1697704340.png', 'Device', 'LOREM IPSUM', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -68,25 +45,30 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `mainbox` (
   `mainbox_id` bigint(20) UNSIGNED NOT NULL,
-  `itemImg` varchar(100) NOT NULL,
+  `itemImg` varchar(255) DEFAULT NULL,
   `itemText` varchar(100) NOT NULL,
   `itemDesc` varchar(10000) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `itemTo` varchar(100) NOT NULL,
-  `compt` varchar(1000) NOT NULL
+  `compt` varchar(255) DEFAULT NULL,
+  `headImg` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `mainbox`
 --
 
-INSERT INTO `mainbox` (`mainbox_id`, `itemImg`, `itemText`, `itemDesc`, `created_at`, `updated_at`, `itemTo`, `compt`) VALUES
-(2, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'training', ''),
-(4, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'comprofile', 'Lorem Ipsum'),
-(5, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'mainp', ''),
-(6, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'prod', ''),
-(7, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'highl', '');
+INSERT INTO `mainbox` (`mainbox_id`, `itemImg`, `itemText`, `itemDesc`, `created_at`, `updated_at`, `itemTo`, `compt`, `headImg`) VALUES
+(6, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'prod', '', ''),
+(20, 'http://127.0.0.1:8000/image2/1699148879.png', 'test', '<p>bismillah bisa</p>', NULL, NULL, 'mainp', NULL, ''),
+(24, 'http://127.0.0.1:8000/image2/1699776306.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'highl', NULL, 'http://127.0.0.1:8000/headimage/1699776306.png'),
+(25, 'http://127.0.0.1:8000/image2/1699776519.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'mainp', NULL, 'http://127.0.0.1:8000/headimage/1699776519.png'),
+(26, 'http://127.0.0.1:8000/image2/1699776747.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'comprofile', NULL, 'http://127.0.0.1:8000/headimage/1699776747.png'),
+(27, 'http://127.0.0.1:8000/image2/1699777152.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'trackrecord', NULL, 'http://127.0.0.1:8000/headimage/1699777152.png'),
+(28, 'http://127.0.0.1:8000/image2/1699777536.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'competition', NULL, 'http://127.0.0.1:8000/headimage/1699777536.png'),
+(29, 'http://127.0.0.1:8000/image2/1699777724.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'workshop', NULL, 'http://127.0.0.1:8000/headimage/1699777724.png'),
+(30, 'http://127.0.0.1:8000/image2/1699778061.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'training', NULL, 'http://127.0.0.1:8000/headimage/1699778061.png');
 
 -- --------------------------------------------------------
 
@@ -115,7 +97,18 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2023_10_19_083704_create_mainbox_table', 4),
 (9, '2023_10_19_095312_create_trainingbox_table', 5),
 (10, '2023_10_19_100657_add_item_to_to_mainbox_table', 6),
-(11, '2023_10_19_161049_add_compt_to_mainbox_table', 7);
+(11, '2023_10_19_161049_add_compt_to_mainbox_table', 7),
+(12, '2023_10_27_155031_modify_mainbox_itemimg_nullable', 8),
+(13, '2023_11_12_073032_add_head_img_to_mainbox_table', 9),
+(14, '2023_11_12_100905_add_head_img_to_boxproduct_table', 10),
+(15, '2023_11_12_101729_add_item_to_to_boxproduct_table', 11),
+(16, '2023_11_12_121044_create_robot_table', 12),
+(17, '2023_11_12_121057_create_agv_table', 12),
+(18, '2023_11_12_121101_create_plc_table', 12),
+(19, '2023_11_12_121106_create_nplc_table', 12),
+(20, '2023_11_12_121303_create_spesifikasi_table', 12),
+(21, '2023_11_12_121851_create_product_table', 13),
+(22, '2023_11_12_122208_create_product_table', 14);
 
 -- --------------------------------------------------------
 
@@ -176,6 +169,33 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `itemImg` varchar(100) NOT NULL,
+  `itemText` varchar(100) NOT NULL,
+  `itemDesc` varchar(10000) NOT NULL,
+  `itemSpec` varchar(1000) NOT NULL,
+  `itemTo` varchar(100) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `itemImg`, `itemText`, `itemDesc`, `itemSpec`, `itemTo`, `created_at`, `updated_at`) VALUES
+(2, 'http://127.0.0.1:8000/image/1699792841.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum Lorem Ipsum</p>', 'robot', NULL, NULL),
+(3, 'http://127.0.0.1:8000/image/1699792920.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum&nbsp;Lorem Ipsum</p>', 'AGV', NULL, NULL),
+(4, 'http://127.0.0.1:8000/image/1699792941.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum&nbsp;Lorem Ipsum</p>', 'plc', NULL, NULL),
+(5, 'http://127.0.0.1:8000/image/1699792953.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum&nbsp;Lorem Ipsum</p>', 'nplc', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `trainingbox`
 --
 
@@ -208,12 +228,6 @@ CREATE TABLE `users` (
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `boxproduct`
---
-ALTER TABLE `boxproduct`
-  ADD PRIMARY KEY (`boxproduct_id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -255,6 +269,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `trainingbox`
 --
 ALTER TABLE `trainingbox`
@@ -272,12 +292,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `boxproduct`
---
-ALTER TABLE `boxproduct`
-  MODIFY `boxproduct_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -287,13 +301,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `mainbox`
 --
 ALTER TABLE `mainbox`
-  MODIFY `mainbox_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `mainbox_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `ourproduct`
@@ -306,6 +320,12 @@ ALTER TABLE `ourproduct`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `trainingbox`

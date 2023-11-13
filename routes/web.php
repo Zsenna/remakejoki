@@ -4,6 +4,12 @@ use App\Http\Controllers\ourProductcontroller;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\mainController;
 use App\Http\Controllers\uploadController;
+use App\Http\Controllers\uploadEduController;
+use App\Http\Controllers\robotController;
+use App\Http\Controllers\agvController;
+use App\Http\Controllers\contentController;
+use App\Http\Controllers\plcController;
+use App\Http\Controllers\nplcController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 /*
@@ -17,7 +23,7 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
 });
 
@@ -42,15 +48,15 @@ Route::get('/training', function () {
 });
 
 Route::get('/center', function () {
-    return view('center');
+    return view('/katalog/trainingcenter');
 });
 
 Route::get('/onsite', function () {
-    return view('onsite');
+    return view('/katalog/trainingonsite');
 });
 
 Route::get('/online', function () {
-    return view('online');
+    return view('/katalog/trainingonline');
 });
 
 Route::get('/competition', function () {
@@ -58,7 +64,7 @@ Route::get('/competition', function () {
 });
 
 Route::get('/worksem', function () {
-    return view('worksem');
+    return view('workshop');
 });
 
 Route::get('/about', function () {
@@ -69,8 +75,12 @@ Route::get('/product', function () {
     return view('product');
 });
 
+Route::get('/deskripsi', function () {
+    return view('katalog/cart');
+});
+
 Route::get('/katalog/robot', function () {
-    return view('/katalog/robot');
+    return view('katalog/robot');
 });
 
 Route::get('/katalog/agv', function () {
@@ -85,8 +95,8 @@ Route::get('/katalog/nplc', function () {
     return view('katalog/nplc');
 });
 
-Route::get('/pic1', function () {
-    return view('katalog/pic1');
+Route::get('/Product-robot', function () {
+    return view('katalog/Product-robot');
 });
 
 Route::get('/pic2', function () {
@@ -104,6 +114,13 @@ Route::get('/si', function () {
     return view('si');
 });
 
+Route::get('/artikel', function () {
+    return view('artikel');
+});
+
+Route::get('/contentBody', function () {
+    return view('katalog/contentBody');
+});
 
 Route::view('add', 'upload');
 Route::post('add', [uploadController::class, 'upload']);
@@ -111,12 +128,21 @@ Route::post('add', [uploadController::class, 'upload']);
 Route::view('add2', 'upload-edu');
 Route::post('add2', [uploadEduController::class, 'upload_edu']);
 
-Route::get('product', [productController::class, 'show']);
-Route::get('robot', [ourProductcontroller::class, 'showrobot']);
-Route::get('agv', [ourProductcontroller::class, 'showagv']);
-Route::get('plc', [ourProductcontroller::class, 'showplc']);
-Route::get('nplc', [ourProductcontroller::class, 'shownplc']);
+Route::resource('Product-robot', robotController::class);
+Route::resource('Product-agv', agvController::class);
+Route::resource('Product-plc', plcController::class);
+Route::resource('Product-nplc', nplcController::class);
+Route::resource('contentBody', contentController::class);
+
+// Route::get('product', [productController::class, 'show']);
+// Route::get('robot', [ourProductcontroller::class, 'showrobot']);
+// Route::get('agv', [ourProductcontroller::class, 'showagv']);
+// Route::get('plc', [ourProductcontroller::class, 'showplc']);
+// Route::get('nplc', [ourProductcontroller::class, 'shownplc']);
 Route::get('home', [mainController::class, 'showmain']);
 Route::get('training', [mainController::class, 'showtraining']);
+Route::get('center', [mainController::class, 'showtrainingc']);
+Route::get('onsite', [mainController::class, 'showtrainingos']);
+Route::get('online', [mainController::class, 'showtrainingol']);
 Route::get('compro', [mainController::class, 'showcompro']);
 Route::get('highlight', [mainController::class, 'showhighlight']);

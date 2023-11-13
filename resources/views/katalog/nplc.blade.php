@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/navfoot.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/katalog.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/navfoot.css">
+    <link rel="stylesheet" href="css/home1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Mec Lab Non PLC</title>
+    <title>Products</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home">
+            <a class="navbar-brand" href="/">
                 <img src="\img\link-logo-blue-svg.png" alt="Image Error" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,9 +49,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Training Center</a></li>
-                                    <li><a class="dropdown-item" href="#">Onsite Training</a></li>
-                                    <li><a class="dropdown-item" href="#">Online Training</a></li>
+                                    <li><a class="dropdown-item" href="/center">Training Center</a></li>
+                                    <li><a class="dropdown-item" href="/onsite">Onsite Training</a></li>
+                                    <li><a class="dropdown-item" href="/online">Online Training</a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
@@ -59,25 +60,17 @@
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Robot</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/robot">Robot</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">AGV</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/agv">AGV</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">PLC Trainer</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/plc">PLC Trainer</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/nplc">Mec Lab non PLC</a>
+
                                     </li>
                                 </ul>
                             </li>
@@ -95,19 +88,80 @@
             </div>
         </div>
     </nav>
-    <div id="outcon" class="container-fluid">
-        <div class="box">
-            <img src="img/op4.png" alt="logo">
-            <p>Mec Lab Non PLC</p>
-            @foreach ($ourproduct as $our)
-            <a>{{ $our['itemDesc'] }}</a>
-            @endforeach
+    <div id="gap" class="container-fluid"></div>
+    <!-- Body 1 -->
+    <?php
+
+    use Illuminate\Support\Facades\DB;
+
+    $nplc =
+        DB::select('SELECT itemImg, itemText, itemDesc, id  FROM product WHERE itemTo = "nplc"');
+    ?>
+    <div id="topoutcon" class="container">
+        <img src="../img/Rectangle 1.png" alt="image error" class="img-fluid">
+        <div class="container-fluid-about">
+            <div class="container-fluid-top">
+                <h4 class="tittle">Mec Lab non PLC</h4>
+                <p class="p"> Docker is a tool for running applications and services in small, light-weight "containers" which
+                    do not interfere with your local machine's installed software or configuration. This means you
+                    don't have to worry about configuring or setting up complicated development tools such as web
+                    servers and databases on your local machine.</p>
+                <p class="p"> Which do not interfere with your local machine's installed software or configuration. This means
+                    you don't have to worry about configuring or setting up complicated development tools such as web
+                    servers and databases on your local machine.</p>
+            </div>
         </div>
     </div>
+    <h1>Products</h1>
+    @foreach($nplc as $np)
+    <div class="card-group" style="margin: 2em;">
+        <div class="card bg-primary product" style="margin: 1em;">
+            <a href="{{url('Product-nplc/' .$np->id)}}">
+                <img class="card-img-top" src="{{$np->itemImg}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: white;">{{$np->itemText}}</h5>
+                    <p class="card-text" style="color: white;">{{Strip_tags($np->itemDesc)}}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    @endforeach
+
+    <!-- Body 2 -->
+    <div id="homecon1" class="container-fluid">
+        <h2>Our Product</h2>
+        <div class="container-fluid-2">
+            <div class="container-fluid">
+                <a href="/robot">
+                    <img src="img\op1.png" class="img-fluid" alt="Image Error">
+                    <p>Robot</p>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a href="/agv">
+                    <img src="img\op2.png" class="img-fluid" alt="Image Error">
+                    <p>AGV</p>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a href="/plc">
+                    <img src="img\op3.png" class="img-fluid" alt="Image Error">
+                    <p>PLC</p>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a href="/nplc">
+                    <img src="img\op4.png" class="img-fluid" alt="Image Error">
+                    <p>Mec Lab non PLC</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
             <div class="row">
-                <img src="\img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
+                <img src="..\img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
             </div>
         </div>
         <div class="container-fluid-mid">
@@ -137,7 +191,7 @@
         </div>
         <div class="container-fluid-bot">
             <div class="container-fluid">
-                <a>© 2023 PT. Festo All rights reserved</a>
+                <a>© 2023</a>
                 <a>Imprint</a>
                 <a>Data protection</a>
                 <a>Terms and conditions</a>

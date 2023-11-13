@@ -18,5 +18,5 @@ class uploadModel extends Model
     }
 
     // Define the fillable fields for mass assignment
-    protected $fillable = ['itemText', 'itemDesc', 'itemImg'];
+    protected $fillable = ['itemText', 'itemDesc', 'itemImg', 'headImg', 'itemTo', 'itemSpec'];
 }

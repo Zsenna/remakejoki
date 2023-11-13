@@ -20,6 +20,24 @@ class mainController extends Controller
         return view('training', ['mainbox' => $data]);
     }
 
+    function showtrainingc()
+    {
+        $data = mainModel::where('itemTo', '')->get();
+        return view('katalog/trainingcenter', ['mainbox' => $data]);
+    }
+
+    function showtrainingos()
+    {
+        $data = mainModel::where('itemTo', '')->get();
+        return view('katalog/trainingonsite', ['mainbox' => $data]);
+    }
+
+    function showtrainingol()
+    {
+        $data = mainModel::where('itemTo', '')->get();
+        return view('katalog/trainingonline', ['mainbox' => $data]);
+    }
+
     function showcompro()
     {
         $data = mainModel::where('itemTo', 'comprofile')->get();

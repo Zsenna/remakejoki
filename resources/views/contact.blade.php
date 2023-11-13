@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact1.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navfoot.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,7 +15,7 @@
 <body">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home">
+            <a class="navbar-brand" href="/">
                 <img src="\img\link-logo-blue-svg.png" alt="Image Error" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +50,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Training Center</a></li>
-                                    <li><a class="dropdown-item" href="#">Onsite Training</a></li>
-                                    <li><a class="dropdown-item" href="#">Online Training</a></li>
+                                    <li><a class="dropdown-item" href="/center">Training Center</a></li>
+                                    <li><a class="dropdown-item" href="/onsite">Onsite Training</a></li>
+                                    <li><a class="dropdown-item" href="/online">Online Training</a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
@@ -60,25 +61,17 @@
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Robot</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/robot">Robot</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">AGV</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/agv">AGV</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">PLC Trainer</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/plc">PLC Trainer</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/nplc">Mec Lab non PLC</a>
+
                                     </li>
                                 </ul>
                             </li>
@@ -164,7 +157,7 @@
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
             <div class="row">
-                <img src="\img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
+                <img src="img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
             </div>
         </div>
         <div class="container-fluid-mid">
@@ -194,7 +187,7 @@
         </div>
         <div class="container-fluid-bot">
             <div class="container-fluid">
-                <a>© 2023 PT. Festo All rights reserved</a>
+                <a>© 2023</a>
                 <a>Imprint</a>
                 <a>Data protection</a>
                 <a>Terms and conditions</a>

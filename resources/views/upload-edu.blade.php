@@ -14,7 +14,13 @@
         <form id="uploadForm" action="add2" method="POST" enctype="multipart/form-data">
             @csrf
             <label for="judul">Judul:</label>
-            <input type="text" id="judul" name="itemText" required><br>
+            <input type="text" id="judul" name="itemText"><br>
+
+            <label for="file">Gambar Header:</label>
+            <input type="file" id="file" name="headImg" accept="/image/*"><br>
+
+            <label for="file">Gambar Konten:</label>
+            <input type="file" id="file" name="itemImg" accept="/image/*"><br>
 
             <label for="deskripsi">Deskripsi:</label>
             <textarea name="itemDesc" id="itemDesc" rows="10" cols="80"></textarea><br>
@@ -34,6 +40,15 @@
 
             <input type="radio" id="highlight" name="itemTo" value="Highlight">
             <label for="highlight">Highlight</label><br>
+
+            <input type="radio" id="workshop" name="itemTo" value="workshop">
+            <label for="workshop">Workshop</label><br>
+
+            <input type="radio" id="trackrecord" name="itemTo" value="Track Record">
+            <label for="trackrecord">Track Record</label><br>
+
+            <input type="radio" id="competition" name="itemTo" value="Competition">
+            <label for="competition">Competition</label><br>
 
             <input type="hidden" name="itemAbbrev" id="itemAbbrev" value="">
 
@@ -61,6 +76,15 @@
                                 break;
                             case "Highlight":
                                 itemAbbrev = "highl";
+                                break;
+                            case "Workshop":
+                                itemAbbrev = "workshop";
+                                break;
+                            case "Track Record":
+                                itemAbbrev = "trackrecord";
+                                break;
+                            case "Competition":
+                                itemAbbrev = "competition";
                                 break;
                             default:
                                 itemAbbrev = selectedRadio.value;

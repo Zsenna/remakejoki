@@ -45,9 +45,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Training Center</a></li>
-                                    <li><a class="dropdown-item" href="#">Onsite Training</a></li>
-                                    <li><a class="dropdown-item" href="#">Online Training</a></li>
+                                    <li><a class="dropdown-item" href="/center">Training Center</a></li>
+                                    <li><a class="dropdown-item" href="/onsite">Onsite Training</a></li>
+                                    <li><a class="dropdown-item" href="/online">Online Training</a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
@@ -93,7 +93,7 @@
         </div>
     </nav>
     <header>
-        <h1>Welcome to the Lorem Ipsum Page (PIC1)</h1>
+        <h1>Welcome to the Lorem Ipsum Page (PIC2)</h1>
     </header>
     <main>
         <section>
@@ -168,7 +168,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 

@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home">
+            <a class="navbar-brand" href="/">
                 <img src="\img\link-logo-blue-svg.png" alt="Image Error" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,9 +47,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/training">Training</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Training Center</a></li>
-                                    <li><a class="dropdown-item" href="#">Onsite Training</a></li>
-                                    <li><a class="dropdown-item" href="#">Online Training</a></li>
+                                    <li><a class="dropdown-item" href="/center">Training Center</a></li>
+                                    <li><a class="dropdown-item" href="/onsite">Onsite Training</a></li>
+                                    <li><a class="dropdown-item" href="/online">Online Training</a></li>
                                 </ul>
                             </li>
                             <li><a class="dropdown-item" href="/competition">competition</a>
@@ -58,25 +58,17 @@
                             </li>
                             <li><a class="dropdown-item" href="/product">Product</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="#">Robot</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="robot">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/robot">Robot</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">AGV</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="agv">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/agv">AGV</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">PLC Trainer</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="plc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/plc">PLC Trainer</a>
+
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Mec Lab non PLC</a>
-                                        <ul class="dropdown-menu submenu">
-                                            <li><a class="dropdown-item" href="nplc">Katalog</a></li>
-                                        </ul>
+                                    <li><a class="dropdown-item" href="/nplc">Mec Lab non PLC</a>
+
                                     </li>
                                 </ul>
                             </li>
@@ -98,8 +90,8 @@
     <div id="homecon2" class="container-fluid">
         <h2 class="tittle">TRAINING</h2>
         @foreach($mainbox as $main)
-        <div class="container-fluid-3">
-            <img src="\img\picture-key-automation-products-highres-en-1-fix696x391-webp.png" class="img-fluid" alt="Image Error">
+        <a href="/artikel#training" class="container-fluid-3">
+            <img src="{{$main['itemImg']}}" class="img-fluid" alt="Image Error">
             <div class="container-fluid">
                 <div class="container-fluid-3a">
                     <h4>{{$main['itemText']}}</h4>
@@ -109,7 +101,7 @@
                     <a class="btn btn-primary" href="#" role="button">Find Out More</a>
                 </div> -->
             </div>
-        </div>
+        </a>
         @endforeach
     </div>
     <div id="homecon3" class="container-fluid">
