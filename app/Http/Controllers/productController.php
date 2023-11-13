@@ -11,6 +11,6 @@ class productController extends Controller
     function show()
     {
         $data = productModel::all();
-        return view('product', ['boxproduct' => $data]);
+        return view('product', ['product' => $data]);
     }
 }

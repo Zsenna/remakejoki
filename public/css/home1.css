@@ -1237,31 +1237,22 @@ body {
 }
 
 #outcon .box {
+    text-decoration: none;
+    width: 50%;
     margin: 0.5em;
     padding-bottom: 1em;
     flex-grow: 0;
     flex-basis: 200;
-    text-align: left;
+    text-align: center;
     background-color: #0091dc;
 }
 
 #outcon .container .box p {
     margin-top: 1em;
-    margin-left: 1em;
-    color: white;
+    color: black;
     font-family: "Work Sans";
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
-}
-
-#outcon .container .box a {
-    margin-left: 1em;
-    color: white;
-    font-family: "Work Sans";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
 }

@@ -93,10 +93,9 @@
 
     use Illuminate\Support\Facades\DB;
 
-    $highlight = DB::select('SELECT headImg FROM mainbox WHERE itemTo = "highl"');
+    $highlight = DB::select('SELECT headImg, itemImg, itemText, mainbox_id FROM mainbox WHERE itemTo = "highl"');
     ?>
     <div id="homecon" class="container-fluid">
-
         @foreach ($highlight as $high)
         <div class="container-fluid-1">
             <img src="{{$high->headImg}}" class="img-fluid" alt="" style="filter: brightness(50%);">
@@ -108,26 +107,12 @@
     </div>
     <div id="outcon" class="container-fluid">
         <div class="container">
-            <div class="box">
-                <img src="img/g1.png" class="img-fluid" alt="Image Error">
-                <p>LOREM IPSUM</p>
-                <a>LOREM IPSUM</a>
-            </div>
-            <div class="box">
-                <img src="img/g2.png" class="img-fluid" alt="Image Error">
-                <p>LOREM IPSUM</p>
-                <a>LOREM IPSUM</a>
-            </div>
-            <div class="box">
-                <img src="img/g3.png" class="img-fluid" alt="Image Error">
-                <p>LOREM IPSUM</p>
-                <a>LOREM IPSUM</a>
-            </div>
-            <div class="box">
-                <img src="img/g4.png" class="img-fluid" alt="Image Error">
-                <p>LOREM IPSUM</p>
-                <a>LOREM IPSUM</a>
-            </div>
+            @foreach ($highlight as $high)
+            <a href="{{url('contenthigh/' .$high->mainbox_id)}}" class="box">
+                <img src="{{$high->itemImg}}" class="img-fluid" alt="Image Error">
+                <p>{{Strip_tags($high->itemText)}}</p>
+            </a>
+            @endforeach
         </div>
     </div>
     <a href="/center" style="text-decoration: none; color: black;"></a>
@@ -274,7 +259,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

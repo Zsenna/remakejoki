@@ -107,7 +107,7 @@
     <div id="homecon2" class="container-fluid">
         <h2 class="tittle">Our Workshop/Seminar</h2>
         @foreach ($workshop as $work)
-        <a href="{{url('contentBody/' .$work->mainbox_id)}}" class="container" style="width: 100%;margin-top: 2em">
+        <a href="{{url('contentwork/' .$work->mainbox_id)}}" class="container" style="width: 100%;margin-top: 2em">
             <div class="row">
                 <div class="col">
                     <img src="{{$work->itemImg}}" class="img-fluid" alt="Image Error">

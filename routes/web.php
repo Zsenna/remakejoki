@@ -7,7 +7,8 @@ use App\Http\Controllers\uploadController;
 use App\Http\Controllers\uploadEduController;
 use App\Http\Controllers\robotController;
 use App\Http\Controllers\agvController;
-use App\Http\Controllers\contentController;
+use App\Http\Controllers\contentworkController;
+use App\Http\Controllers\contenthighController;
 use App\Http\Controllers\plcController;
 use App\Http\Controllers\nplcController;
 use Illuminate\Support\Facades\Route;
@@ -95,32 +96,26 @@ Route::get('/katalog/nplc', function () {
     return view('katalog/nplc');
 });
 
-Route::get('/Product-robot', function () {
-    return view('katalog/Product-robot');
-});
-
-Route::get('/pic2', function () {
-    return view('katalog/pic2');
-});
-
-Route::get('/pic3', function () {
-    return view('katalog/pic3');
-});
-
-Route::get('/pic4', function () {
-    return view('katalog/pic4');
-});
-Route::get('/si', function () {
-    return view('si');
-});
-
 Route::get('/artikel', function () {
     return view('artikel');
 });
 
-Route::get('/contentBody', function () {
-    return view('katalog/contentBody');
-});
+// Route::get('/pic2', function () {
+//     return view('katalog/pic2');
+// });
+
+// Route::get('/pic3', function () {
+//     return view('katalog/pic3');
+// });
+
+// Route::get('/pic4', function () {
+//     return view('katalog/pic4');
+// });
+// Route::get('/si', function () {
+//     return view('si');
+// });
+
+
 
 Route::view('add', 'upload');
 Route::post('add', [uploadController::class, 'upload']);
@@ -132,13 +127,14 @@ Route::resource('Product-robot', robotController::class);
 Route::resource('Product-agv', agvController::class);
 Route::resource('Product-plc', plcController::class);
 Route::resource('Product-nplc', nplcController::class);
-Route::resource('contentBody', contentController::class);
+Route::resource('contentwork', contentworkController::class);
+Route::resource('contenthigh', contenthighController::class);
 
-// Route::get('product', [productController::class, 'show']);
-// Route::get('robot', [ourProductcontroller::class, 'showrobot']);
-// Route::get('agv', [ourProductcontroller::class, 'showagv']);
-// Route::get('plc', [ourProductcontroller::class, 'showplc']);
-// Route::get('nplc', [ourProductcontroller::class, 'shownplc']);
+Route::get('product', [productController::class, 'show']);
+Route::get('robot', [ourProductcontroller::class, 'showrobot']);
+Route::get('agv', [ourProductcontroller::class, 'showagv']);
+Route::get('plc', [ourProductcontroller::class, 'showplc']);
+Route::get('nplc', [ourProductcontroller::class, 'shownplc']);
 Route::get('home', [mainController::class, 'showmain']);
 Route::get('training', [mainController::class, 'showtraining']);
 Route::get('center', [mainController::class, 'showtrainingc']);
