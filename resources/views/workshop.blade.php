@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home1.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="../css/navfoot.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Workshop</title>
 </head>
@@ -107,7 +108,7 @@
     <div id="homecon2" class="container-fluid">
         <h2 class="tittle">Our Workshop/Seminar</h2>
         @foreach ($workshop as $work)
-        <a href="{{url('contentwork/' .$work->mainbox_id)}}" class="container" style="width: 100%;margin-top: 2em">
+        <a class="container" style="width: 100%;margin-top: 2em">
             <div class="row">
                 <div class="col">
                     <img src="{{$work->itemImg}}" class="img-fluid" alt="Image Error">
@@ -119,49 +120,51 @@
             </div>
         </a>
         @endforeach
-        <div id="footer" class="container-fluid">
-            <div class="container-fluid-sos">
-                <div class="row">
-                    <img src="\img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
-                </div>
-            </div>
-            <div class="container-fluid-mid">
-                <div class="container-fluid">
-                    <h4>Highlight</h4>
-                    <p>Core product range</p>
-                    <p>Online shop</p>
-                    <p>All product categories</p>
-                    <p>Southeast Asia Selected Products</p>
-                </div>
-                <div class="container-fluid">
-                    <h4>Contact</h4>
-                    <p>Get in touch</p>
-                    <p>Press portal</p>
-                    <p>Distributors</p>
-                    <p>Help and Support</p>
-                </div>
-                <div class="container-fluid">
-                    <h4>Industry segments</h4>
-                    <p>Automotive and tier 1 supplier industry</p>
-                    <p>Electronics Industry</p>
-                    <p>Food processing and packaging</p>
-                    <p>Biotech, pharmaceutical and cosmetics industries</p>
-                    <p>Chemical industry</p>
-                    <p>Water technology</p>
-                </div>
-            </div>
-            <div class="container-fluid-bot">
-                <div class="container-fluid">
-                    <a>© 2023</a>
-                    <a>Imprint</a>
-                    <a>Data protection</a>
-                    <a>Terms and conditions</a>
-                </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+        <div class="container-fluid-sos">
+            <div class="row">
+                <img src="\img\div-footer-social-wlq8h.svg" class="img-fluid" alt="Image Error">
             </div>
         </div>
+        <div class="container-fluid-mid">
+            <div class="container-fluid">
+                <h4>Highlight</h4>
+                <p>Core product range</p>
+                <p>Online shop</p>
+                <p>All product categories</p>
+                <p>Southeast Asia Selected Products</p>
+            </div>
+            <div class="container-fluid">
+                <h4>Contact</h4>
+                <p>Get in touch</p>
+                <p>Press portal</p>
+                <p>Distributors</p>
+                <p>Help and Support</p>
+            </div>
+            <div class="container-fluid">
+                <h4>Industry segments</h4>
+                <p>Automotive and tier 1 supplier industry</p>
+                <p>Electronics Industry</p>
+                <p>Food processing and packaging</p>
+                <p>Biotech, pharmaceutical and cosmetics industries</p>
+                <p>Chemical industry</p>
+                <p>Water technology</p>
+            </div>
+        </div>
+        <div class="container-fluid-bot">
+            <div class="container-fluid">
+                <a>© 2023</a>
+                <a>Imprint</a>
+                <a>Data protection</a>
+                <a>Terms and conditions</a>
+            </div>
+        </div>
+    </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

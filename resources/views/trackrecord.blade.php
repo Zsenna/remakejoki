@@ -107,7 +107,7 @@
         <div class="container" style="width: 72%;">
             <div class="row">
                 <div class="col">
-                    <img src="img\picture-key-automation-products-highres-en-1-fix696x391-webp.png" onclick="showImage('img/picture-key-automation-products-highres-en-1-fix696x391-webp.png')" class="img-fluid" alt="Image Error">
+                    <img src="img\picture-key-automation-products-highres-en-1-fix696x391-webp.png" class="img-fluid" alt="Image Error">
                 </div>
                 <div class="col" style="text-align: left;">
                     <h4>Judul</h4>
@@ -223,7 +223,7 @@
         </a>
     </div>
 
-    <h4 style="margin-bottom: 2em;">Our Patner</h4>
+    <h4 style="margin-bottom: 2em;">Our Partner</h4>
     <div class="container-fluid">
         <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <!-- <div class="carousel-indicators">

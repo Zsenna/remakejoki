@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
+Route::get('/carousel', function () {
+    return view('/carousel');
+});
+
 Route::get('/', function () {
     return view('home');
 });
@@ -33,7 +37,7 @@ Route::get('/trackrecord', function () {
 });
 
 Route::get('/highlight', function () {
-    return view('highlight');
+    return view('Highlight');
 });
 
 Route::get('/compro', function () {
@@ -141,4 +145,4 @@ Route::get('center', [mainController::class, 'showtrainingc']);
 Route::get('onsite', [mainController::class, 'showtrainingos']);
 Route::get('online', [mainController::class, 'showtrainingol']);
 Route::get('compro', [mainController::class, 'showcompro']);
-Route::get('highlight', [mainController::class, 'showhighlight']);
+Route::get('Highlight', [mainController::class, 'showhighlight']);

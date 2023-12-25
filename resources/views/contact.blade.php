@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contact1.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navfoot.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -98,8 +98,8 @@
                     </div>
                 </div>
                 <div id="caontainerteks2" class="container">
-                    <div class="col-lg-6 fs-4">
-                        <p style="color: #928A97;">We are always care about your project. Feel free to contact with us. We make digital any project with augmented, virtual and mixed reality. We offer IoT support as well.</p>
+                    <div class="col-lg fs-4">
+                        <p>We are always care about your project. Feel free to contact with us. We make digital any project with augmented, virtual and mixed reality. We offer IoT support as well.</p>
                     </div>
                 </div>
             </div>

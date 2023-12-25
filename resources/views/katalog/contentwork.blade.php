@@ -270,7 +270,7 @@
     ?>
     <div id="content" class="container-fluid">
         @foreach ($workshop as $work)
-        <div class="row" style="background-color: aqua; padding-left: 5em; padding-top: 2em;">
+        <div class="row" style="padding-left: 5em; padding-top: 2em;">
             <img class="img-fluid" alt="" src="{{$work->itemImg}}" style="width: 30%; height :30%" />
             <p style="padding-top: 1em; padding-left: 0.8em;">{{Strip_tags($work->itemDesc)}}</p>
         </div>

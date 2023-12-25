@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home1.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Home</title>
 </head>
@@ -93,25 +94,58 @@
     use Illuminate\Support\Facades\DB;
 
     $mainbox =
-        DB::select('SELECT itemImg, itemText, itemDesc, headImg FROM mainbox WHERE itemTo = "mainp"');
+        DB::select('SELECT headImg, itemImg, itemText, itemDesc, mainbox_id FROM mainbox WHERE itemTo = "mainp"');
     ?>
 
     <div id="homecon" class="container-fluid">
-        <div class="container-fluid-1">
-            @foreach ($mainbox as $main)
-            <img src="{{$main->headImg}}" class="img-fluid" alt="">
-            @endforeach
-            <div class="popup-card">
-                <div class="updown">
-                    <h5 style="padding-bottom: .2em;">About us</h4>
-                        <p class="headtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis facilis tempore id, voluptatum dolor magnam eaque est, illo impedit doloremque ratione officia explicabo labore? Vero placeat quos hic quasi minima.</p>
+        <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="container-fluid-1">
+                <!-- <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div> -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img\picture-electric-automation-seamless-connectivity-screen-fix18.png" class="img-fluid" alt="">
+                        <div class="container-fluid">
+                            <div class="container-fluid-top">
+                                <h4>lorem ipsum</h4>
+                                <p>lorem ipsum</p>
+                            </div>
+                        </div>
+                        <!-- <div class="container-fluid-bot">
+                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
+                            </div> -->
+                    </div>
+                    @foreach($mainbox as $main)
+                    <div class="carousel-item">
+                        <img src="{{$main->headImg}}" class="img-fluid" alt="">
+                        <div class="container-fluid">
+                            <div class="container-fluid-top">
+                                <h4>{{ $main->itemText}}</h4>
+                                <p>{{ strip_tags($main->itemDesc)}}</p>
+                            </div>
+                        </div>
+                        <!-- <div class="container-fluid-bot">
+                                <a class="btn btn-primary" href="#" role="button">Find Out More</a>
+                            </div> -->
+                    </div>
+                    @endforeach
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
         </div>
     </div>
+    </div>
 
-    <div id="homecon2" class="container-fluid">
+    <!-- <div id="homecon2" class="container-fluid">
         <h2 class="tittle">HIGHLIGHT</h2>
         <a href="/artikel#home" class="container" style="width: 100%;">
             @foreach ($mainbox as $main)
@@ -126,8 +160,8 @@
             </div>
             @endforeach
         </a>
-    </div>
-    <div id="homecon3" class="container-fluid">
+    </div> -->
+    <div id="homecon3" class="container-fluid" style="margin-top: 2em;">
         <a href="/highlight" class="container-fluid-con">
             <img src="img\picture-energy-saving-services-screen-fix496x661-webp-2.png" class="img-fluid" alt="Image Error">
             <div class="container-fluid-4">
@@ -191,35 +225,41 @@
         </div>
     </div>
 
-    <div id="homecon1" class="container-fluid">
+    <section class="slider_container">
         <h2>Our Product</h2>
-        <div class="container-fluid-2">
-            <div class="container-fluid">
-                <a href="/robot">
-                    <img src="img\op1.png" class="img-fluid" alt="Image Error">
-                    <p>Robot</p>
-                </a>
-            </div>
-            <div class="container-fluid">
-                <a href="/agv">
-                    <img src="img\op2.png" class="img-fluid" alt="Image Error">
-                    <p>AGV</p>
-                </a>
-            </div>
-            <div class="container-fluid">
-                <a href="/plc">
-                    <img src="img\op3.png" class="img-fluid" alt="Image Error">
-                    <p>PLC</p>
-                </a>
-            </div>
-            <div class="container-fluid">
-                <a href="/nplc">
-                    <img src="img\op4.png" class="img-fluid" alt="Image Error">
-                    <p>Mec Lab non PLC</p>
-                </a>
+        <div class="container">
+            <div class="swiper card_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/robot" class="img_box">
+                            <img src="img\op1.png" alt="" />
+                            <p>Robot</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/agv" class="img_box">
+                            <img src="img\op2.png" alt="" />
+                            <p>AGV</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/plc" class="img_box">
+                            <img src="img\op3.png" alt="" />
+                            <p>PLC</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/nplc" class="img_box">
+                            <img src="img\op4.png" alt="" />
+                            <p>Mec Lab non PLC</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next" style="color: black;"></div>
+                <div class="swiper-button-prev" style="color: black;"></div>
             </div>
         </div>
-    </div>
+    </section>
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
             <div class="row">
@@ -262,6 +302,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

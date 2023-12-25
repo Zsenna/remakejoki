@@ -90,7 +90,7 @@
     <div id="homecon2" class="container-fluid">
         <h2 class="tittle">TRAINING</h2>
         @foreach($mainbox as $main)
-        <a href="/artikel#training" class="container-fluid-3">
+        <a class="container-fluid-3 pt-4">
             <img src="{{$main['itemImg']}}" class="img-fluid" alt="Image Error">
             <div class="container-fluid">
                 <div class="container-fluid-3a">

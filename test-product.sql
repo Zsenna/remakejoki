@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2023 at 07:44 AM
+-- Generation Time: Nov 14, 2023 at 07:29 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -60,7 +60,6 @@ CREATE TABLE `mainbox` (
 --
 
 INSERT INTO `mainbox` (`mainbox_id`, `itemImg`, `itemText`, `itemDesc`, `created_at`, `updated_at`, `itemTo`, `compt`, `headImg`) VALUES
-(6, '', 'LOREM IPSUM', 'Lorem Ipsum', NULL, NULL, 'prod', '', ''),
 (20, 'http://127.0.0.1:8000/image2/1699148879.png', 'test', '<p>bismillah bisa</p>', NULL, NULL, 'mainp', NULL, ''),
 (24, 'http://127.0.0.1:8000/image2/1699776306.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'highl', NULL, 'http://127.0.0.1:8000/headimage/1699776306.png'),
 (25, 'http://127.0.0.1:8000/image2/1699776519.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'mainp', NULL, 'http://127.0.0.1:8000/headimage/1699776519.png'),
@@ -68,7 +67,12 @@ INSERT INTO `mainbox` (`mainbox_id`, `itemImg`, `itemText`, `itemDesc`, `created
 (27, 'http://127.0.0.1:8000/image2/1699777152.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'trackrecord', NULL, 'http://127.0.0.1:8000/headimage/1699777152.png'),
 (28, 'http://127.0.0.1:8000/image2/1699777536.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'competition', NULL, 'http://127.0.0.1:8000/headimage/1699777536.png'),
 (29, 'http://127.0.0.1:8000/image2/1699777724.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'workshop', NULL, 'http://127.0.0.1:8000/headimage/1699777724.png'),
-(30, 'http://127.0.0.1:8000/image2/1699778061.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'training', NULL, 'http://127.0.0.1:8000/headimage/1699778061.png');
+(30, 'http://127.0.0.1:8000/image2/1699778061.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', NULL, NULL, 'training', NULL, 'http://127.0.0.1:8000/headimage/1699778061.png'),
+(32, 'http://127.0.0.1:8000/image2/1699931336.png', 'test1', '<p>test1</p>', NULL, NULL, 'highl', NULL, ''),
+(33, 'http://127.0.0.1:8000/image2/1699931351.png', 'test2', '<p>test2</p>', NULL, NULL, 'highl', NULL, ''),
+(34, 'http://127.0.0.1:8000/image2/1699931366.png', 'test3', '<p>test3</p>', NULL, NULL, 'highl', NULL, ''),
+(35, 'http://127.0.0.1:8000/image2/1699931402.png', 'test4', '<p>test4</p>', NULL, NULL, 'highl', NULL, ''),
+(36, 'http://127.0.0.1:8000/image2/1699931424.png', 'test5', '<p>test5</p>', NULL, NULL, 'highl', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -188,10 +192,30 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `itemImg`, `itemText`, `itemDesc`, `itemSpec`, `itemTo`, `created_at`, `updated_at`) VALUES
-(2, 'http://127.0.0.1:8000/image/1699792841.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum Lorem Ipsum</p>', 'robot', NULL, NULL),
-(3, 'http://127.0.0.1:8000/image/1699792920.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum&nbsp;Lorem Ipsum</p>', 'AGV', NULL, NULL),
-(4, 'http://127.0.0.1:8000/image/1699792941.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum&nbsp;Lorem Ipsum</p>', 'plc', NULL, NULL),
-(5, 'http://127.0.0.1:8000/image/1699792953.png', 'LOREM IPSUM', '<p>Lorem Ipsum</p>', '<p>Lorem Ipsum&nbsp;Lorem Ipsum</p>', 'nplc', NULL, NULL);
+(8, 'http://127.0.0.1:8000/image/1699933461.png', 'test1', '<p>test1</p>', '<p>test1</p>', 'robot', NULL, NULL),
+(9, 'http://127.0.0.1:8000/image/1699933481.png', 'test1', '<p>test1</p>', '<p>test1</p>', 'AGV', NULL, NULL),
+(10, 'http://127.0.0.1:8000/image/1699933491.png', 'test1', '<p>test1</p>', '<p>test1</p>', 'plc', NULL, NULL),
+(11, 'http://127.0.0.1:8000/image/1699933499.png', 'test1', '<p>test1</p>', '<p>test1</p>', 'nplc', NULL, NULL),
+(12, 'http://127.0.0.1:8000/image/1699933511.png', 'test2', '<p>test2</p>', '<p>test2</p>', 'robot', NULL, NULL),
+(13, 'http://127.0.0.1:8000/image/1699933547.png', 'test2', '<p>test2</p>', '<p>test2</p>', 'AGV', NULL, NULL),
+(14, 'http://127.0.0.1:8000/image/1699933555.png', 'test2', '<p>test2</p>', '<p>test2</p>', 'plc', NULL, NULL),
+(15, 'http://127.0.0.1:8000/image/1699933562.png', 'test2', '<p>test2</p>', '<p>test2</p>', 'nplc', NULL, NULL),
+(16, 'http://127.0.0.1:8000/image/1699933575.png', 'test3', '<p>test3</p>', '<p>test3</p>', 'robot', NULL, NULL),
+(17, 'http://127.0.0.1:8000/image/1699933584.png', 'test3', '<p>test3</p>', '<p>test3</p>', 'AGV', NULL, NULL),
+(18, 'http://127.0.0.1:8000/image/1699933592.png', 'test3', '<p>test3</p>', '<p>test3</p>', 'plc', NULL, NULL),
+(19, 'http://127.0.0.1:8000/image/1699933634.png', 'test3', '<p>test3</p>', '<p>test3</p>', 'nplc', NULL, NULL),
+(20, 'http://127.0.0.1:8000/image/1699933649.png', 'test4', '<p>test4</p>', '<p>test4</p>', 'robot', NULL, NULL),
+(21, 'http://127.0.0.1:8000/image/1699933656.png', 'test4', '<p>test4</p>', '<p>test4</p>', 'AGV', NULL, NULL),
+(22, 'http://127.0.0.1:8000/image/1699933664.png', 'test4', '<p>test4</p>', '<p>test4</p>', 'plc', NULL, NULL),
+(23, 'http://127.0.0.1:8000/image/1699933671.png', 'test4', '<p>test4</p>', '<p>test4</p>', 'nplc', NULL, NULL),
+(24, 'http://127.0.0.1:8000/image/1699933686.png', 'test5', '<p>test5</p>', '<p>test5</p>', 'robot', NULL, NULL),
+(25, 'http://127.0.0.1:8000/image/1699933694.png', 'test5', '<p>test5</p>', '<p>test5</p>', 'AGV', NULL, NULL),
+(26, 'http://127.0.0.1:8000/image/1699933703.png', 'test5', '<p>test5</p>', '<p>test5</p>', 'plc', NULL, NULL),
+(27, 'http://127.0.0.1:8000/image/1699933713.png', 'test5', '<p>test5</p>', '<p>test5</p>', 'nplc', NULL, NULL),
+(28, 'http://127.0.0.1:8000/image/1699933758.png', 'test6', '<p>test6</p>', '<p>test6</p>', 'robot', NULL, NULL),
+(29, 'http://127.0.0.1:8000/image/1699933775.png', 'test6', '<p>test6</p>', '<p>test6</p>', 'AGV', NULL, NULL),
+(30, 'http://127.0.0.1:8000/image/1699933781.png', 'test6', '<p>test6</p>', '<p>test6</p>', 'nplc', NULL, NULL),
+(31, 'http://127.0.0.1:8000/image/1699933788.png', 'test6', '<p>test6</p>', '<p>test6</p>', 'plc', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -301,7 +325,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `mainbox`
 --
 ALTER TABLE `mainbox`
-  MODIFY `mainbox_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `mainbox_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -325,7 +349,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `trainingbox`

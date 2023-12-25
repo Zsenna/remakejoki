@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/navfoot.css">
     <link rel="stylesheet" href="css/home1.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Products</title>
 </head>
@@ -113,50 +115,54 @@
         </div>
     </div>
     <h1>Products</h1>
-    @foreach($robot as $rob)
-    <div class="card-group" style="margin: 2em;">
-        <div class="card bg-primary product" style="margin: 1em;">
-            <a href="{{url('Product-robot/' .$rob->id)}}">
-                <img class="card-img-top" src="{{$rob->itemImg}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title" style="color: white;">{{$rob->itemText}}</h5>
-                    <p class="card-text" style="color: white;">{{Strip_tags($rob->itemDesc)}}</p>
-                </div>
+    <div id="outcon" class="container-fluid">
+        <div class="container">
+            @foreach ($robot as $rob)
+            <a href="{{url('Product-robot/' .$rob->id)}}" class="box">
+                <img src="{{$rob->itemImg}}" class="img-fluid" alt="Image Error">
+                <h4 class="card-title" style="color: white;">{{$rob->itemText}}</h4>
+                <p style="color: white;">{{Strip_tags($rob->itemText)}}</p>
             </a>
+            @endforeach
         </div>
     </div>
-    @endforeach
 
     <!-- Body 2 -->
-    <div id="homecon1" class="container-fluid">
+    <section class="slider_container">
         <h2>Our Product</h2>
-        <div class="container-fluid-2">
-            <div class="container-fluid">
-                <a href="/robot">
-                    <img src="img\op1.png" class="img-fluid" alt="Image Error">
-                    <p>Robot</p>
-                </a>
-            </div>
-            <div class="container-fluid">
-                <a href="/agv">
-                    <img src="img\op2.png" class="img-fluid" alt="Image Error">
-                    <p>AGV</p>
-                </a>
-            </div>
-            <div class="container-fluid">
-                <a href="/plc">
-                    <img src="img\op3.png" class="img-fluid" alt="Image Error">
-                    <p>PLC</p>
-                </a>
-            </div>
-            <div class="container-fluid">
-                <a href="/nplc">
-                    <img src="img\op4.png" class="img-fluid" alt="Image Error">
-                    <p>Mec Lab non PLC</p>
-                </a>
+        <div class="container">
+            <div class="swiper card_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/robot" class="img_box">
+                            <img src="img\op1.png" alt="" />
+                            <p>Robot</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/agv" class="img_box">
+                            <img src="img\op2.png" alt="" />
+                            <p>AGV</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/plc" class="img_box">
+                            <img src="img\op3.png" alt="" />
+                            <p>PLC</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/nplc" class="img_box">
+                            <img src="img\op4.png" alt="" />
+                            <p>Mec Lab non PLC</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next" style="color: black;"></div>
+                <div class="swiper-button-prev" style="color: black;"></div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div id="footer" class="container-fluid">
         <div class="container-fluid-sos">
@@ -200,6 +206,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

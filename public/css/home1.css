@@ -88,6 +88,7 @@ body {
 }
 
 #homecon .container-fluid-top {
+    padding: 0em 2em;
     height: 100%;
     width: 100%;
 }
@@ -1200,7 +1201,6 @@ body {
     width: 100%;
     font-family: "ABeeZee";
     font-size: 55px;
-    text-decoration: underline;
 }
 .highlight-content {
     margin-top: 2em;
@@ -1222,15 +1222,14 @@ body {
 }
 
 #outcon {
-    margin-top: 1.5em;
-    flex-direction: column;
+    margin-top: 2em;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
 
 #outcon .container {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1238,13 +1237,20 @@ body {
 
 #outcon .box {
     text-decoration: none;
-    width: 50%;
     margin: 0.5em;
     padding-bottom: 1em;
     flex-grow: 0;
     flex-basis: 200;
     text-align: center;
     background-color: #0091dc;
+}
+
+#outcon .container .box h4 {
+    margin-top: 0.8em;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 #outcon .container .box p {

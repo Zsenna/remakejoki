@@ -15,7 +15,7 @@ class uploadEduController extends Controller
             'itemDesc' => 'required|string',
             'itemTo' => 'required|string',
             'itemImg' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'headImg' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'headImg' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $filename = '';

@@ -98,7 +98,7 @@
     <div id="homecon" class="container-fluid">
         @foreach ($training as $trai)
         <div class="container-fluid-1">
-            <img src="{{$trai->headImg}}" class="img-fluid" alt="Image Error" style="filter: brightness(50%);">
+            <img src="{{$trai->headImg}}" class="img-fluid" alt="" style="filter: brightness(50%);">
         </div>
         @endforeach
     </div>
